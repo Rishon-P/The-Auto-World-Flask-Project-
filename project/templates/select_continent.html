@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=Martian+Mono:wght@100..800&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&family=Plaster&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=Martian+Mono:wght@100..800&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&display=swap" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=1,width=device-width">
+
+    </head>
+
+    <style>
+
+        .body{
+            background-color:#888888;
+        }
+
+        .main_title {
+            font-family: "Plaster", cursive;
+            text-align:center;
+            color:red;
+            font-weight:bold;
+            font-size:40px;
+        }
+
+        .buttons {
+            background:transparent;
+            border:0px;
+            width:400px;
+        }
+
+        .horizontal_arrange{
+            display:flex;
+        }
+
+        #individual {
+            padding-right:100px;
+        }
+
+        .button_image{
+            border:none;
+            outline:none;
+            width:130px;
+
+
+
+        }
+
+        .hovering {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .hovering:hover {
+            transform:scale(1.05);
+            cursor:pointer;
+        }
+
+        .button_image {
+            cursor:pointer;
+        }
+
+
+
+    </style>
+
+
+    <body style="background-color:#888888;">
+
+
+        <div class="main_title">
+
+            <u>Continents</u>
+
+
+        </div>
+
+    <div class="horizontal_arrange">
+
+        <form action="/usa">
+        <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;"><img src="/static/america.png" id="individual" class="buttons" alt='image'></button>
+        </form>
+
+        <form action="/europe">
+        <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;"><img src="/static/europe.png" id="individual" class="buttons" alt='image'></button>
+        </form>
+
+        <form action="/asia_pacific">
+        <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;"><img src="/static/asia_pacific.png" id="individual" class="buttons" alt='image'></button>
+        </form>
+
+    </div>
+
+
+        <form action="/">
+        <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;"><img src="/static/home_button.png" alt="go to home" class="button_image"></button>
+        </form>
+
+
+    </body>
+
+
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=Martian+Mono:wght@100..800&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&family=Plaster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&display=swap" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=1,width=device-width">
+        <h1>
+            <div class = "title">
+                <u>The Lamborghini Aventador</u>
+            </div>
+        </h1>
+
+
+    </head>
+
+
+    <style>
+        body {
+            /* The image used */
+            background-image: url('{{ url_for('static', filename='aventador.png') }}'); /*
+
+            /* Make the background image cover the entire screen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Optional: Fix the image position */
+            background-attachment: fixed;
+
+        }
+
+        .title {
+
+            text-align:center;
+            color:blue;
+            font-family: "Plaster", system-ui;
+        }
+
+        .body_text {
+            font-family: "Edu QLD Beginner", cursive;
+            text-align:left;
+            color:yellow;
+            font-size:27px;
+            font-weight:bold;
+        }
+
+        .button_image{
+            border:none;
+            outline:none;
+            width:130px;
+        }
+
+        .button_image:hover{
+            cursor:pointer;
+        }
+
+        .hovering {
+            transition:transform 0.2s ease-in-out;
+        }
+
+        .hovering:hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+    </style>
+
+    <body>
+        <div class="body_text">
+            The Aventador was launched on 28 February 2011 at the Geneva Motor Show . Soon after its unveiling, Lamborghini announced that it had sold 12 cars, with deliveries starting in the second half of 2011. By March 2016, Lamborghini had built 5,000 Aventadors. At the time, it was the second-best selling Lamborghini model ever . The Aventador LP 700–4 used Lamborghini's 700 PS (515 kW; 690 hp) 6,498 cc (6.5 L; 396.5 cu in) 60° V12 engine, weighing about 235 kg (518 lb). Known internally as the L539, it was Lamborghini's fifth in-house engine and only second V12 design since the 3.5-litre power plant found in the 350GT.
+            The different models of aventador over the years are : i) LP 700-4 Roadster ii) SuperVeloce LP 750-4 iii) SuperVeloce LP 750-4 Roadster iv) S LP 740-4 v) S Roadster vi) SVJ LP 770-4 vii) SVJ Roadster viii) LP 780-4 Ultimae .
+            Some of the special editions are : i) J ii) LP 720-4 50º Anniversario iii) Pirelli Edition iv) SVJ 63 v) SVJ 63 Roadster vi) SVJ Roadster Xago Edition .
+            The production of the Lamborghini Aventador officially stopped in September 2022.
+        </div>
+
+        <form action="/">
+        <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;"><img src="/static/home_button.png" alt="go to home" class="button_image"></button>
+    </form>
+    </body>
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=Martian+Mono:wght@100..800&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&family=Plaster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&display=swap" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=1,width=device-width">
+        <h1>
+            <div class = "title">
+                <h1>
+                    <u>Audi AG</u>
+                </h1>
+
+            </div>
+        </h1>
+    </head>
+
+
+    <style>
+        body {
+            /* The image used */
+            background-image: url('{{ url_for('static', filename='germany_bkg.jpg') }}'); /*
+
+            /* Make the background image cover the entire screen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Optional: Fix the image position */
+            background-attachment: fixed;
+
+        }
+
+        .title {
+
+            text-align:center;
+            color:red;
+            font-family: "Plaster", system-ui;
+        }
+
+        .side_titles {
+
+            text-align:left;
+            color:white;
+            font-family: "Orbitron", sans-serif;
+            font-weight: bold
+            margin-top:0px;
+            margin-bottom:0px;
+        }
+
+        .body_text {
+            font-family: "Edu QLD Beginner", cursive;
+            text-align:left;
+            color:white;
+            font-size:27px;
+            font-weight:bold;
+            overflow: auto;
+            margin-top:0px;
+            margin-bottom:0px;
+            padding-left:10px;
+        }
+
+        .gap{
+            font-size:0px;
+            padding-left:0px;
+            padding-right:0px;
+            padding-top:0px;
+            padding-bottom:0px;
+        }
+
+        .container {
+        border: 1px solid #ccc;
+        padding: 15px;
+        overflow: auto; /* A common trick to contain floats (or use clear) */
+        }
+
+        .floated-image-left {
+        float: left; /* Image floats to the left */
+        width: 300px; /* Set a width for the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 35px; /* Space between image and text on its right */
+        margin-bottom: 10px;
+        border: 3px solid black;
+        }
+
+        .floated-image-right {
+        float: right; /* Image floats to the left */
+        width: 200px; /* Set a width for the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 15px; /* Space between image and text on its right */
+        margin-bottom: 10px; /* Space below the image */
+        }
+
+        #individual {
+            padding-right:100px;
+            padding-left:100px;
+            padding-top:100px;
+
+        }
+
+        .button_image{
+            border:none;
+            outline:none;
+            width:100px;
+        }
+
+        .button_image:hover {
+            cursor:pointer;
+        }
+
+        .buttons {
+            background:transparent;
+            border:0px;
+            width:130px;
+        }
+
+        .hovering {
+            transition:transform 0.2s ease-in-out;
+        }
+
+        .hovering:hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .text {
+            padding-left:20px;
+        }
+
+        .horizontal_arrange{
+            display:flex;
+        }
+
+    </style>
+
+    <body>
+
+        <div class="body_text">
+            <img src="/static/audi_head.jpg" alt="img" class="floated-image-left">
+            <div class="text">
+            <ul >
+                <li>
+                    Audi AG  is a German automotive manufacturer of luxury vehicles headquartered in Ingolstadt, Bavaria, Germany.  A subsidiary of the Volkswagen Group, Audi produces vehicles in nine production facilities worldwide.
+                </li>
+
+                <li>
+                    The origins of the company are complex, dating back to the early 20th century and the initial enterprises (Horch and the Audiwerke) founded by engineer August Horch. Two other manufacturers (DKW and Wanderer) also contributed to the foundation of Auto Union in 1932.
+                </li>
+
+                <li>
+                      The modern Audi era began in the 1960s, when Auto Union was acquired by Volkswagen from Daimler-Benz.[7] After relaunching the Audi brand with the 1965 introduction of the Audi F103 series, Volkswagen merged Auto Union with NSU Motorenwerke in 1969, thus creating the present-day form of the company.
+                </li>
+
+                <li>
+                    The four rings of the Audi logo each represent one of four car companies that banded together to create Audi's predecessor company, Auto Union. Audi's slogan is Vorsprung durch Technik, which is translated as 'Progress through Technology'.
+                </li>
+
+                <li>
+                   Audi, along with German brands BMW and Mercedes-Benz, is among the best-selling luxury automobile brands in the world.
+                </li>
+
+                <li>
+                    Audi actively participates in several racing disciplines, including Formula 1, the Dakar Rally, endurance racing (like Le Mans), and customer racing programs. They also have a history of success in rallies, touring, and sports car competitions.
+                </li>
+
+
+
+
+
+
+
+
+            </ul>
+            </div>
+
+
+
+        </div>
+
+        <div class="horizontal_arrange">
+
+            <form action="/">
+            <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;"><img src="/static/home_button.png" alt="go to home" class="button_image"></button>
+            </form>
+
+            <form action="/select_continent">
+            <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:100px;padding-left:100px;padding-top:100px;"><img src="/static/back_to_continents_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+            </form>
+
+            <form action="/germany">
+            <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:100px;padding-left:100px;padding-top:100px;"><img src="/static/back_to_companies_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+            </form>
+
+            <form action="/europe">
+                <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:100px;padding-left:100px;padding-top:100px;"><img src="/static/back_to_countries_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+                </form>
+
+        </div>
+
+
+    </body>
+
+</html>

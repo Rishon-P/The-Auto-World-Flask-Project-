@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=Martian+Mono:wght@100..800&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&family=Plaster&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=Martian+Mono:wght@100..800&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&display=swap" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=1,width=device-width">
+
+    </head>
+
+    <style>
+
+        body {
+            /* The image used */
+            background-image: url('{{ url_for('static', filename='uk_bkg.jpg') }}'); /*
+
+            /* Make the background image cover the entire screen */
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            /* Optional: Fix the image position */
+            background-attachment: fixed;
+
+
+        }
+
+        .main_title {
+            font-family: "Plaster", cursive;
+            text-align:center;
+            color:red;
+            font-weight:bold;
+            font-size:40px;
+        }
+
+        .buttons {
+            background:transparent;
+            border:0px;
+            width:130px;
+        }
+
+        .horizontal_arrange{
+            display:flex;
+        }
+
+        #individual {
+            padding-right:100px;
+            padding-left:100px;
+            padding-top:100px;
+        }
+
+        .button_image{
+            border:none;
+            outline:none;
+            width:100px;
+        }
+
+
+        .hovering {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .hovering:hover {
+            transform:scale(1.15);
+            cursor:pointer;
+        }
+
+    </style>
+
+
+    <body>
+
+
+        <div class="main_title">
+
+            <u>United Kingdom</u>
+
+        </div>
+
+    <div class="horizontal_arrange">
+
+        <form action="/jaguar">
+        <button type="submit" class="hovering" style="border:none;outline:none;background-color:transparent;"><img src="/static/jaguar_logo.png" id="individual" class="buttons" alt='image'></button>
+        </form>
+
+        <form action="/aston_martin">
+        <button type="submit" class="hovering" style="border:none;outline:none;background-color:transparent;"><img src="/static/aston_martin_logo.png" id="individual" class="buttons" alt='image'></button>
+        </form>
+
+        <form action="/mclaren">
+        <button type="submit" class="hovering" style="border:none;outline:none;background-color:transparent;"><img src="/static/mclaren_logo.png" id="individual" class="buttons" alt='image'></button>
+        </form>
+
+    </div>
+
+
+    <div class="horizontal_arrange">
+
+        <form action="/europe">
+        <button class="hovering" type="submit"  style="border:none;outline:none;background-color:transparent;padding-left:80px;padding-top:100px;"><img src="/static/back_to_countries_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+        </form>
+
+        <form action="/select_continent">
+        <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:120px;padding-left:100px;padding-top:100px;"><img src="/static/back_to_continents_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+        </form>
+
+        <form action="/">
+        <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:100px;padding-left:60px;padding-top:100px;"><img src="/static/home_button.png" alt="go to home" style="width:100px" class="button_image"></button>
+        </form>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+
+</html>

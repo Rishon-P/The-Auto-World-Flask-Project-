@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=Martian+Mono:wght@100..800&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&family=Plaster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&display=swap" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=1,width=device-width">
+        <h1>
+            <div class = "title">
+                <h1>
+                    <u>Lexus</u>
+                </h1>
+
+            </div>
+        </h1>
+    </head>
+
+
+    <style>
+        body {
+            /* The image used */
+            background-image: url('{{ url_for('static', filename='japan_bkg.jpg') }}'); /*
+
+            /* Make the background image cover the entire screen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Optional: Fix the image position */
+            background-attachment: fixed;
+
+        }
+
+        .title {
+
+            text-align:center;
+            color:red;
+            font-family: "Plaster", system-ui;
+        }
+
+        .side_titles {
+
+            text-align:left;
+            color:white;
+            font-family: "Orbitron", sans-serif;
+            font-weight: bold
+            margin-top:0px;
+            margin-bottom:0px;
+        }
+
+        .body_text {
+            font-family: "Edu QLD Beginner", cursive;
+            text-align:left;
+            color:white;
+            font-size:27px;
+            font-weight:bold;
+            overflow: auto;
+            margin-top:0px;
+            margin-bottom:0px;
+            padding-left:10px;
+        }
+
+        .gap{
+            font-size:0px;
+            padding-left:0px;
+            padding-right:0px;
+            padding-top:0px;
+            padding-bottom:0px;
+        }
+
+        .container {
+        border: 1px solid #ccc;
+        padding: 15px;
+        overflow: auto; /* A common trick to contain floats (or use clear) */
+        }
+
+        .floated-image-left {
+        float: left; /* Image floats to the left */
+        width: 300px; /* Set a width for the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 35px; /* Space between image and text on its right */
+        margin-bottom: 10px;
+        border: 3px solid black;
+        }
+
+        .floated-image-right {
+        float: right; /* Image floats to the left */
+        width: 200px; /* Set a width for the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 15px; /* Space between image and text on its right */
+        margin-bottom: 10px; /* Space below the image */
+        }
+
+        #individual {
+            padding-right:100px;
+            padding-left:100px;
+            padding-top:100px;
+
+        }
+
+        .button_image{
+            border:none;
+            outline:none;
+            width:100px;
+        }
+
+        .button_image:hover {
+            cursor:pointer;
+        }
+
+        .buttons {
+            background:transparent;
+            border:0px;
+            width:130px;
+        }
+
+        .hovering {
+            transition:transform 0.2s ease-in-out;
+        }
+
+        .hovering:hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .text {
+            padding-left:20px;
+        }
+
+        .horizontal_arrange{
+            display:flex;
+        }
+
+    </style>
+
+    <body>
+
+        <div class="body_text">
+            <img src="/static/lexus_head.png" alt="img" class="floated-image-left">
+            <div class="text">
+            <ul >
+                <li>
+                    Lexus is the luxury vehicle division of the Japanese automaker Toyota Motor Corporation. The Lexus brand is marketed in more than 90 countries and territories worldwide and is Japan's largest-selling make of premium cars. It has ranked among the 10 largest Japanese global brands in market value.
+                </li>
+
+                <li>
+                    Lexus is headquartered in Shimoyama in Japan since 2024. Operational centers are located in Brussels, Belgium, and Plano, Texas, United States.
+                </li>
+
+                <li>
+                    Created at around the same time as Japanese rivals Honda and Nissan created their Acura and Infiniti luxury divisions respectively, Lexus originated from a corporate project to develop a new premium sedan, code-named F1, which began in 1983 and culminated in the launch of the Lexus LS in 1989. Subsequently, the division added sedan, coupé, convertible and SUV models.
+                </li>
+
+                <li>
+                    Lexus did not exist as a brand in its home market until 2005, and all vehicles marketed internationally as Lexus from 1989 to 2005 were released in Japan under the Toyota marque and an equivalent model name. In 2005, a hybrid version of the RX crossover debuted and additional hybrid models later joined the division's lineup. Lexus launched its own F marque performance division in 2007 with the debut of the IS F sport sedan, followed by the LFA supercar in 2009.
+                </li>
+
+                <li>
+                   Lexus participates in various GT3-based racing series, including the IMSA WeatherTech SportsCar Championship and the FIA World Endurance Championship. They also have a history of competing in GT3 and GT4 championships.
+                </li>
+
+
+
+
+
+
+
+
+            </ul>
+            </div>
+
+
+
+        </div>
+
+        <div class="horizontal_arrange">
+
+            <form action="/">
+            <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;"><img src="/static/home_button.png" alt="go to home" class="button_image"></button>
+            </form>
+
+            <form action="/select_continent">
+            <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:100px;padding-left:100px;padding-top:100px;"><img src="/static/back_to_continents_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+            </form>
+
+            <form action="/japan">
+            <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:100px;padding-left:100px;padding-top:100px;"><img src="/static/back_to_companies_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+            </form>
+
+            <form action="/asia_pacific">
+                <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:100px;padding-left:100px;padding-top:100px;"><img src="/static/back_to_countries_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+                </form>
+
+        </div>
+
+
+    </body>
+
+</html>

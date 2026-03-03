@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=Martian+Mono:wght@100..800&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&family=Plaster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&display=swap" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=1,width=device-width">
+        <h1>
+            <div class = "title">
+                <u>Top 5 Motor Races in the World</u>
+            </div>
+        </h1>
+    </head>
+
+
+    <style>
+        body {
+            /* The image used */
+            background-image: url('{{ url_for('static', filename='races_bkg.jpg') }}'); /*
+
+            /* Make the background image cover the entire screen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Optional: Fix the image position */
+            background-attachment: fixed;
+
+        }
+
+        .title {
+
+            text-align:center;
+            color:blue;
+            font-family: "Plaster", system-ui;
+        }
+
+        .side_titles {
+
+            text-align:left;
+            color:red;
+            font-family: "Orbitron", sans-serif;
+            font-weight: bold
+            margin-top:0px;
+            margin-bottom:0px;
+        }
+
+        .body_text {
+            font-family: "Edu QLD Beginner", cursive;
+            text-align:left;
+            color:yellow;
+            font-size:27px;
+            font-weight:bold;
+            overflow: auto;
+            margin-top:0px;
+            margin-bottom:0px;
+        }
+
+        .gap{
+            font-size:0px;
+            padding-left:0px;
+            padding-right:0px;
+            padding-top:0px;
+            padding-bottom:0px;
+        }
+
+        .container {
+        border: 1px solid #ccc;
+        padding: 15px;
+        overflow: auto; /* A common trick to contain floats (or use clear) */
+        }
+
+        .floated-image-left {
+        float: left; /* Image floats to the left */
+        width: 200px; /* Set a width for the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 15px; /* Space between image and text on its right */
+        margin-bottom: 10px; /* Space below the image */
+        }
+
+        .floated-image-right {
+        float: right; /* Image floats to the left */
+        width: 200px; /* Set a width for the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 15px; /* Space between image and text on its right */
+        margin-bottom: 10px; /* Space below the image */
+        }
+
+        .button_image{
+            border:none;
+            outline:none;
+            width:130px;
+        }
+
+        .button_image:hover {
+            cursor:pointer;
+        }
+
+        .hovering {
+            transition:transform 0.2s ease-in-out;
+        }
+
+        .hovering:hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+    </style>
+
+    <body>
+        <div class = "side_titles">
+            <h2>
+            <u>Indianapolis 500 (IndyCar Series, USA)</u>
+            </h2>
+        </div>
+        <div class="body_text">
+            <img src="/static/indiana_500.jpg" alt="img" class="floated-image-left">
+            The Indianapolis 500, formally known as the Indianapolis 500-Mile Race, and commonly shortened to Indy 500, is an annual automobile race held at the Indianapolis Motor Speedway in Speedway, Indiana, United States, an enclave suburb of Indianapolis . It is contested as part of the IndyCar Series, the top level of American open-wheel car racing, a formula colloquially known as "Indy car racing".
+            . Drivers race for a total of 200 laps where each lap is of 2.5 miles length .  It is one of the races that together form the Triple Crown of MotorSport .
+        </div>
+        <div class = "side_titles">
+            <h2>
+            <u>24 hours of Le Mans</u>
+            </h2>
+        </div>
+        <div class="body_text">
+            <img src="/static/le_mans.png" alt="img"  class="floated-image-right">
+            The 24 Hours of Le Mans (French: 24 Heures du Mans) is an endurance-focused sports car race held annually near the city of Le Mans, France. It is widely considered to be one of the world's most prestigious races . Unlike fixed-distance races whose winner is determined by minimum time, the 24 Hours of Le Mans is won by the car that covers the greatest distance in 24 hours. It is one of the races that
+            together form the Triple Crown of MotorSport . One lap of the circuit is of length 8.467 miles .
+        </div>
+        <div class = "side_titles">
+            <h2>
+            <u>Daytona 500 (NASCAR Cup Series)</u>
+            </h2>
+        </div>
+        <div class="body_text">
+            <img src="/static/daytona_500.png" alt="img"  class="floated-image-left">
+            The Daytona 500 is a 500-mile-long (805 km) NASCAR Cup Series motor race held annually at Daytona International Speedway in Daytona Beach, Florida . It is the first of two Cup races held every year at Daytona, the second being the Coke Zero Sugar 400 . Daytona International Speedway is 2.5 miles (4 km) long and a 500-mile race requires 200 laps to complete . The Daytona 500 is regarded as the most important and prestigious race on the NASCAR calendar, carrying by far the largest purse.
+             The inaugural Daytona 500 was held in 1959 .
+        </div>
+        <div class = "side_titles">
+            <h2>
+            <u>FIA (Formula One World Championship)</u>
+            </h2>
+        </div>
+        <div class="body_text">
+            <img src="/static/f1.png" alt="img"  class="floated-image-right">
+            Formula One (F1) is the highest class of worldwide racing for open-wheel single-seater formula racing cars sanctioned by the Fédération Internationale de l'Automobile (FIA). The FIA Formula One World Championship has been one of the world's premier forms of motorsport since its inaugural running in 1950 and is often considered to be the pinnacle of motorsport . A Formula One season consists of a series of races, known as Grands Prix.
+            Grands Prix take place in multiple countries and continents on either purpose-built circuits or closed roads.
+        </div>
+        <div class = "side_titles">
+            <h2>
+            <u>Dakar Rally</u>
+            </h2>
+        </div>
+        <div class="body_text">
+            <img src="/static/dakar_rally.png" alt="img"  class="floated-image-left">
+            The Dakar Rally (French: Le Rallye Dakar) is an annual rally raid organised by the Amaury Sport Organisation (ASO) . The Dakar Rally is a grueling, annual off-road endurance rally, often considered the world's toughest race. It involves competitors racing across challenging terrains, including deserts, dunes, and mountains, in various vehicles like cars, motorcycles, trucks, and quads.
+            The rally typically spans two weeks and covers thousands of kilometers. Some stages in the race are "marathon stages" where competitors must camp in the desert without support vehicles or mechanics.
+        </div>
+
+    <form action="/">
+        <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;"><img src="/static/home_button.png" alt="go to home" class="button_image"></button>
+    </form>
+
+    </body>
+
+</html>

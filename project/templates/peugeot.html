@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=Martian+Mono:wght@100..800&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&family=Plaster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&display=swap" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=1,width=device-width">
+        <h1>
+            <div class = "title">
+                <h1>
+                    <u>Peugeot</u>
+                </h1>
+
+            </div>
+        </h1>
+    </head>
+
+
+    <style>
+        body {
+            /* The image used */
+            background-image: url('{{ url_for('static', filename='france_bkg2.jpg') }}'); /*
+
+            /* Make the background image cover the entire screen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Optional: Fix the image position */
+            background-attachment: fixed;
+
+        }
+
+        .title {
+
+            text-align:center;
+            color:red;
+            font-family: "Plaster", system-ui;
+        }
+
+        .side_titles {
+
+            text-align:left;
+            color:red;
+            font-family: "Orbitron", sans-serif;
+            font-weight: bold
+            margin-top:0px;
+            margin-bottom:0px;
+        }
+
+        .body_text {
+            font-family: "Edu QLD Beginner", cursive;
+            text-align:left;
+            color:black;
+            font-size:27px;
+            font-weight:bold;
+            overflow: auto;
+            margin-top:0px;
+            margin-bottom:0px;
+            padding-left:10px;
+        }
+
+        .gap{
+            font-size:0px;
+            padding-left:0px;
+            padding-right:0px;
+            padding-top:0px;
+            padding-bottom:0px;
+        }
+
+        .container {
+        border: 1px solid #ccc;
+        padding: 15px;
+        overflow: auto; /* A common trick to contain floats (or use clear) */
+        }
+
+        .floated-image-left {
+        float: left; /* Image floats to the left */
+        width: 300px; /* Set a width for the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 35px; /* Space between image and text on its right */
+        margin-bottom: 10px;
+        border: 3px solid black;
+        }
+
+        .floated-image-right {
+        float: right; /* Image floats to the left */
+        width: 200px; /* Set a width for the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 15px; /* Space between image and text on its right */
+        margin-bottom: 10px; /* Space below the image */
+        }
+
+        #individual {
+            padding-right:100px;
+            padding-left:100px;
+            padding-top:100px;
+
+        }
+
+        .button_image{
+            border:none;
+            outline:none;
+            width:100px;
+        }
+
+        .button_image:hover {
+            cursor:pointer;
+        }
+
+        .buttons {
+            background:transparent;
+            border:0px;
+            width:130px;
+        }
+
+        .hovering {
+            transition:transform 0.2s ease-in-out;
+        }
+
+        .hovering:hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .text {
+            padding-left:20px;
+        }
+
+        .horizontal_arrange{
+            display:flex;
+        }
+
+    </style>
+
+    <body>
+
+        <div class="body_text">
+            <img src="/static/peugeot_head.png" alt="img" class="floated-image-left">
+            <div class="text">
+            <ul >
+                <li>
+                    Peugeot is a French automobile brand owned by Stellantis.
+                </li>
+
+                <li>
+                    The family business that preceded the current Peugeot companies was established in 1810, making it the oldest car company in the world. On 20 November 1858, Émile Peugeot applied for the lion trademark. Armand Peugeot (1849–1915) built the company's first vehicle, a steam-powered tricycle. In 1886, the company collaborated with Léon Serpollet, followed by the development of an internal combustion car in 1890, which used a Panhard-Daimler engine.
+                </li>
+
+                <li>
+                     Peugeot participates in many top races like FIA World Endurance Championship (WEC) , 24 Hours of Le Mans , World Rally Championship , Dakar Rally , Stock Car Brasil and Pikes Peak International Hill Climb .
+                </li>
+
+                <li>
+                    The Peugeot Motocycles company remained a major producer of scooters, underbones, mopeds, and bicycles in Europe, as of 2018. Peugeot produced an electric motor scooter, the Peugeot Scoot'Elec, from 1996 to 2006, and was projected to re-enter the market in 2011 with the E-Vivacity.
+                </li>
+
+                <li>
+                    Peugeot also produced bicycles starting in 1882 in Beaulieu, France (with ten Tour de France wins between 1903 and 1983) . In the late 1980s Peugeot sold the North American rights to the Peugeot bicycle name to ProCycle, a Canadian company which also sold bicycles under the CCM and Velo Sport names.
+                </li>
+
+
+
+
+
+
+
+
+            </ul>
+            </div>
+
+
+
+        </div>
+
+        <div class="horizontal_arrange">
+
+            <form action="/">
+            <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;"><img src="/static/home_button.png" alt="go to home" class="button_image"></button>
+            </form>
+
+            <form action="/select_continent">
+            <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:100px;padding-left:100px;padding-top:100px;"><img src="/static/back_to_continents_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+            </form>
+
+            <form action="/france">
+            <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:100px;padding-left:100px;padding-top:100px;"><img src="/static/back_to_companies_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+            </form>
+
+            <form action="/europe">
+                <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:100px;padding-left:100px;padding-top:100px;"><img src="/static/back_to_countries_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+                </form>
+
+        </div>
+
+
+    </body>
+
+</html>

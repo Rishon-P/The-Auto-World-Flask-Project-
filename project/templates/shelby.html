@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=Martian+Mono:wght@100..800&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&family=Plaster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&display=swap" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=1,width=device-width">
+        <h1>
+            <div class = "title">
+                <h1>
+                    <u>Shelby American, Inc</u>
+                </h1>
+
+            </div>
+        </h1>
+    </head>
+
+
+    <style>
+        body {
+            /* The image used */
+            background-image: url('{{ url_for('static', filename='michigan_bkg.jpg') }}'); /*
+
+            /* Make the background image cover the entire screen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Optional: Fix the image position */
+            background-attachment: fixed;
+
+        }
+
+        .title {
+
+            text-align:center;
+            color:red;
+            font-family: "Plaster", system-ui;
+        }
+
+        .side_titles {
+
+            text-align:left;
+            color:red;
+            font-family: "Orbitron", sans-serif;
+            font-weight: bold
+            margin-top:0px;
+            margin-bottom:0px;
+        }
+
+        .body_text {
+            font-family: "Edu QLD Beginner", cursive;
+            text-align:left;
+            color:black;
+            font-size:27px;
+            font-weight:bold;
+            overflow: auto;
+            margin-top:0px;
+            margin-bottom:0px;
+            padding-left:10px;
+        }
+
+        .gap{
+            font-size:0px;
+            padding-left:0px;
+            padding-right:0px;
+            padding-top:0px;
+            padding-bottom:0px;
+        }
+
+        .container {
+        border: 1px solid #ccc;
+        padding: 15px;
+        overflow: auto; /* A common trick to contain floats (or use clear) */
+        }
+
+        .floated-image-left {
+        float: left; /* Image floats to the left */
+        width: 300px; /* Set a width for the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 35px; /* Space between image and text on its right */
+        margin-bottom: 10px;
+        border: 3px solid black;
+        }
+
+        .floated-image-right {
+        float: right; /* Image floats to the left */
+        width: 200px; /* Set a width for the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 15px; /* Space between image and text on its right */
+        margin-bottom: 10px; /* Space below the image */
+        }
+
+        #individual {
+            padding-right:100px;
+            padding-left:100px;
+            padding-top:100px;
+
+        }
+
+        .button_image{
+            border:none;
+            outline:none;
+            width:100px;
+        }
+
+        .button_image:hover {
+            cursor:pointer;
+        }
+
+        .buttons {
+            background:transparent;
+            border:0px;
+            width:130px;
+        }
+
+        .hovering {
+            transition:transform 0.2s ease-in-out;
+        }
+
+        .hovering:hover {
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+
+        .text {
+            padding-left:20px;
+        }
+
+        .horizontal_arrange{
+            display:flex;
+        }
+
+    </style>
+
+    <body>
+
+        <div class="body_text">
+            <img src="/static/shelby_head.jpg" alt="img" class="floated-image-left">
+            <div class="text">
+            <ul >
+                <li>
+                    Shelby American, Inc. is an American high performance automobile company founded by driver Carroll Shelby. .
+                </li>
+
+                <li>
+                    The Shelby American name has been used by several legally distinct corporations founded by Shelby since his original shop in Venice, California began operation in 1962. The current iteration is a wholly owned subsidiary of Carroll Shelby International, Inc. (Expert Market: CSBI), a holding company formed in 2003.
+                </li>
+
+                <li>
+                     Shelby American was the first automobile manufacturer in the state of Nevada. Shelby American manufactures component automobiles, including replicas of the small-block and large-block AC Cobras, the Shelby GT350 and the GT500 Super Snake.
+                </li>
+
+                <li>
+                    Since 2005, Shelby American has released new models each year.
+                </li>
+
+                <li>
+                    Shelby-designed cars, particularly the Cobra, GT40, and Mustang, have been prominent in a variety of racing events throughout their history. The Ford GT40, in particular, achieved notable success at the 24 Hours of Le Mans, winning four consecutive races. Shelby himself raced in the 24 Hours of Le Mans, winning in 1959 driving an Aston Martin DBR1.
+                </li>
+
+                <li>
+                    Shelby American cars have also participated in many races like SCCA's A-Sedan class and the Trans-Am series, particularly with the 1967 K-code Mustang models , FIA (Fédération Internationale de l'Automobile) Racing and many drag races .
+                </li>
+
+                <li>
+                    In essence, Shelby cars have participated in a variety of racing disciplines, from endurance racing like Le Mans to club racing and even drag racing, showcasing their performance and adaptability across different racing formats.
+                </li>
+
+
+
+
+
+
+            </ul>
+            </div>
+
+
+
+        </div>
+
+        <div class="horizontal_arrange">
+
+            <form action="/">
+            <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;"><img src="/static/home_button.png" alt="go to home" class="button_image"></button>
+            </form>
+
+            <form action="/select_continent">
+            <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:100px;padding-left:100px;padding-top:100px;"><img src="/static/back_to_continents_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+            </form>
+
+            <form action="/usa">
+            <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;padding-right:100px;padding-left:100px;padding-top:100px;"><img src="/static/back_to_companies_button.png" alt="go to home" style="width:200px" class="button_image"></button>
+            </form>
+
+        </div>
+
+
+    </body>
+
+</html>

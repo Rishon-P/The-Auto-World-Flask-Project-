@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Frijole&family=Lugrasimo&family=Martian+Mono:wght@100..800&family=New+Rocker&family=Orbitron:wght@400..900&family=Pirata+One&family=Plaster&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+
+    <head>
+        <meta name="viewport" content="initial-scale=1,width=device-width">
+    </head>
+    <style>
+
+
+        body {
+            /* The image used */
+            background-image: url('{{ url_for('static', filename='lamb_bkg.png') }}'); /*
+
+            /* Make the background image cover the entire screen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Optional: Fix the image position */
+            background-attachment: fixed;
+
+
+        }
+
+        .navbar {
+            background-color:#444;
+            width:100%;
+            position:relative;
+            overflow:visible;
+        }
+
+        .navbar a{
+            font-family: "Creepster", system-ui;
+            float:left;
+            color:red;
+            padding: 12px 16px;
+            text-align:center;
+            display:block;
+            text-decoration:none;
+            font-size:40px;
+            padding-right:50px;
+        }
+
+
+
+        .dropdown-menu {
+            cursor:pointer;
+        }
+
+        .dropdown-content {
+            display:none;
+            z-index:1;
+            opacity:0;
+            position:absolute;
+            transform: translate(50px,0px);
+            translation: opacity 1s ease, transform 1s ease;
+        }
+
+        .dropdown-content a {
+            font-family: "Creepster", system-ui;
+            display:block;
+            color:red;
+            text-align:left;
+            font-size:40px;
+            padding:12px 16px;
+            padding-right:50px;
+        }
+
+        .navbar:hover .dropdown-content{
+            display:block;
+            opacity:1;
+            transform:translate(160px,67px);
+        }
+
+        .navbar a:hover{
+            color:green;
+        }
+
+        .dropdown-content a:hover {
+            color:green;
+        }
+
+        .about_menu {
+            width:100%;
+            position:relative;
+        }
+
+        .about_menu a{
+            font-family: "Creepster", system-ui;
+            float:left;
+            color:red;
+            padding: 12px 16px;
+            padding-right: 50px
+            text-align:left;
+            display:block;
+            text-decoration:none;
+            font-size:40px;
+        }
+
+        .about_menu:hover a{
+            color:green;
+        }
+
+        .about_car {
+            width:100%;
+            position:relative;
+        }
+
+        .about_car a{
+            font-family: "Creepster", system-ui;
+            float:left;
+            color:red;
+            padding: 12px 16px;
+            padding-right: 50px
+            text-align:left;
+            display:block;
+            text-decoration:none;
+            font-size:40px;
+        }
+
+        .about_car:hover a{
+            color:green;
+        }
+
+
+
+        .about_races {
+            width:100%;
+            position:relative;
+        }
+
+        .about_races a{
+            font-family: "Creepster", system-ui;
+            float:left;
+            color:red;
+            padding: 12px 16px;
+            padding-right: 50px
+            text-align:left;
+            display:block;
+            text-decoration:none;
+            font-size:40px;
+        }
+
+        .about_races:hover a{
+            color:green;
+        }
+
+        .button_image{
+            border:none;
+            outline:none;
+            width:90px;
+        }
+
+        .button_image:hover{
+            cursor:pointer;
+        }
+
+        .hovering {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .hovering:hover {
+            transform:scale(1.15);
+            cursor:pointer;
+        }
+
+
+    </style>
+
+    <body>
+        <h1 style="font-size:70px ; text-align:center ; color:red;font-family: 'Plaster', system-ui;">
+            <u>THE AUTO WORLD</u>
+        </h1>
+        <form action="/aboutus">
+        <button class="hovering" type="submit" style="border:none;outline:none;background-color:transparent;"><img src="/static/aboutus_button.png" alt="go to home" class="button_image"></button>
+        </form>
+
+        <form action="/select_continent">
+        <button type="submit" class="hovering" style="border:none;outline:none;background-color:transparent;"><img src="/static/gobycountries_button.png" alt="go to home" class="button_image"></button>
+        </form>
+
+        <form action="/about_car">
+        <button type="submit" class="hovering" style="border:none;outline:none;background-color:transparent;"><img src="/static/aboutaventador_button.png" alt="go to home" class="button_image"></button>
+        </form>
+
+        <form action="/about_races">
+        <button type="submit" class="hovering" style="border:none;outline:none;background-color:transparent;"><img src="/static/aboutraces_button.png" alt="go to home" class="button_image"></button>
+        </form>
+
+
+
+    </body>
+
+</html>
